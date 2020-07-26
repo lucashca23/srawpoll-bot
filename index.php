@@ -23,11 +23,11 @@ for ($contador = 0; $contador <= $qtdVotos; $contador++)
                     ->body($array)
                     ->sendsJson()
                     ->send();
-        //$objJson = $response->body;
-        //echo 'Voto '.$contador.' = '.$objJson->message.'<br>';
+        $objJson = $response->body;
+        echo 'Voto '.$contador.' = '.$objJson->message.'<br>';
     }
     catch(Exception $e)
     {
-        //echo 'Falha! Voto '.$contador.' = Negado pelo servidor proxy<br>';    
+        echo 'Falha! Voto '.$contador.' = Negado pelo servidor proxy<br>';    
     }
 }
